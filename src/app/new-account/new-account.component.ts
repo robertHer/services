@@ -13,7 +13,7 @@ export class NewAccountComponent {
   
 
   constructor(/*private logginService: LogginService, */ private accountService:AccountService){
-
+    this.accountService.statusUpdated.subscribe((status:string) => {alert('new status ' + status);})
   } //binding to property
 
   onCreateAccount(accountName: string, accountStatus: string ,) {
